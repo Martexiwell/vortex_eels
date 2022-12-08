@@ -18,6 +18,7 @@ import scipy.constants as const
 #import spectrum
 #import green
 import wave_functions
+from tools import read_matlab_data
 
 import matplotlib.pyplot as plt
 import matplotlib.colors as colors
@@ -31,21 +32,7 @@ plt.rcParams.update({
 # %matplotlib auto       # interactive plots
 # %matplotlib inline     # non-interactive plots
 
-#%%
 
-def read_matlab_data( filename):
-    csvpath =  filename + ".csv"
-    f = open(csvpath, "r")
-    txt = f.read()
-    f.close()
-    txt = txt.replace("i","j")
-    
-    f = open(filename+"_j.csv", "w")
-    f.write(txt)
-    
-    data = np.loadtxt(filename+"_j.csv", dtype=complex, delimiter=",")
-
-    return data
 
 #%% read data
 

@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="152ae8e2-3a08-42e5-8d55-9d524cebd5c4" name="Changes" comment="Upload MATLAB files">
-      <change beforePath="$PROJECT_DIR$/MATLAB/MNPBEM17/MY_PROJECTS/nanorods/nanorods.mlx" beforeDir="false" afterPath="$PROJECT_DIR$/MATLAB/MNPBEM17/MY_PROJECTS/nanorods/nanorods.mlx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MATLAB/MNPBEM17/MY_PROJECTS/nanorods/nanorods_retarded.mlx" beforeDir="false" afterPath="$PROJECT_DIR$/MATLAB/MNPBEM17/MY_PROJECTS/nanorods/nanorods_retarded.mlx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigencharges.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Data/eigencharges.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigencharges_j.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Data/eigencharges_j.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenpseudolambdas.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Data/eigenpseudolambdas.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenpseudolambdas_j.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Data/eigenpseudolambdas_j.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/numericsmapprocessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/numericsmapprocessor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/numericsprocessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/numericsprocessor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/tools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wave_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/wave_functions.py" afterDir="false" />
+    <list default="true" id="152ae8e2-3a08-42e5-8d55-9d524cebd5c4" name="Changes" comment="uklizeni">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,8 +51,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Fyzing\Projects\vortex_eels\vortex_eels\Python\Data" />
       <recent name="C:\Fyzing\Projects\vortex_eels\vortex_eels\Python" />
+      <recent name="C:\Fyzing\Projects\vortex_eels\vortex_eels\Python\Data" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -80,7 +71,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672842299151</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="uklizeni">
+      <created>1672854004669</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672854004669</updated>
+    </task>
+    <task id="LOCAL-00003" summary="uklizeni">
+      <created>1672854441681</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672854441681</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -96,6 +101,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Upload MATLAB files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Upload MATLAB files" />
+    <MESSAGE value="uklizeni" />
+    <option name="LAST_COMMIT_MESSAGE" value="uklizeni" />
   </component>
 </project>

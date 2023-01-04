@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="152ae8e2-3a08-42e5-8d55-9d524cebd5c4" name="Changes" comment="uklizeni">
-      <change afterPath="$PROJECT_DIR$/Python/functions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python/numericsmapprocessor2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python/numericsmapprocessor_normator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/numericsmapprocessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/numericsmapprocessor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/tools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="152ae8e2-3a08-42e5-8d55-9d524cebd5c4" name="Changes" comment="uklizeni" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672854441681</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="uklizeni">
+      <created>1672864370540</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672864370540</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

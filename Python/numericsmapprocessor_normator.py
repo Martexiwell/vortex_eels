@@ -84,87 +84,12 @@ ax = fig.add_subplot(projection='3d')
 ax.scatter(sx,sy,sz)
 
 
-#%% P E R M I I V I T Y
-
-
 #%% Omegas and alphas
-
 omegas =  np.linspace(.6,1,50) *1e16 #np.linspace(3,9,50) * const.eV/const.hbar
 omega_p = 9.1 * const.eV/const.hbar
 gamma_p = 0.15 * const.eV/const.hbar
 epsilonko = permitivity_drude(omegas, omega_p, gamma_p)
 
-# #%% P O T E N T I A L
-
-# omega = .33e16
-# potentials = [] 
-# for n in range(numofstates):
-#     potential = (
-#                 2 * pfacearea * eigencharges[:,n] * np.exp(-1j * omega / v * sz) @
-#                 np.moveaxis(kn(0, omega / v * np.sqrt((XX-sx)**2 + (YY-sy)**2) ), 0, 1)
-#                 )
-#     potentials.append(potential)
-#     print(f"potential number {n}: DONE")
-# potentials = np.array(potentials)
-# #%% vykresleni vlastnich modu real
-
-# for i in range(numofstates-2):
-#     fig, ax = plt.subplots()
-#     ax.set_title(f"Re$[\,\Phi_{{{i+1}}} ( \omega = {omega/1e15} \cdot 10^{{15}} \, \mathrm{{rad\cdot s^{{-1}}}}  )]$")
-#     ax1 = ax.pcolormesh(X*1e9,Y*1e9,np.real(potentials[i+2]), norm=colors.CenteredNorm(), cmap="RdBu_r")
-#     ax.set_aspect(1)
-#     plt.colorbar(ax1)
-#     ax.set(xlabel = "$x \, / \, \mathrm{nm}$",
-#            ylabel = "$y \, / \, \mathrm{nm}$")
-#     fig.savefig(f"potentials/Phi_{i}_re.png", dpi=150)
-    
-# #%% vykresleni vlastnich modu imag
-
-# for i in range(numofstates-2):
-#     fig, ax = plt.subplots()
-#     ax.set_title(f"Im$[\,\Phi_{{{i+1}}} ( \omega = {omega/1e15} \cdot 10^{{15}} \, \mathrm{{rad\cdot s^{{-1}}}}  )]$")
-#     ax1 = ax.pcolormesh(X*1e9,Y*1e9,np.imag(potentials[i+2]), norm=colors.CenteredNorm(), cmap="PiYG_r")
-#     ax.set_aspect(1)
-#     plt.colorbar(ax1)
-#     ax.set(xlabel = "$x \, / \, \mathrm{nm}$",
-#            ylabel = "$y \, / \, \mathrm{nm}$")
-#     fig.savefig(f"potentials/Phi_{i}_im.png", dpi=150)
-    
-# #%% vykresleni vlastnich modu abs
-
-# for i in range(numofstates-2):
-#     fig, ax = plt.subplots()
-#     ax.set_title(f"$| \phi_{{{i+1}}} |$")
-#     ax1 = ax.pcolormesh(X,Y,np.abs(potentials[i+2]), cmap="inferno")
-#     ax.set_aspect(1)
-#     plt.colorbar(ax1)
-    
-# #%% vykresleni vlastnich modu 
-# for i in range(numofstates-2):
-#     fig, (axre, axim) = plt.subplots(1,2)
-    
-#     axre.set_title(f"Re$[\,\Phi_{{{i+1}}} ( \omega = {omega/1e15} \cdot 10^{{15}} \, \mathrm{{rad\cdot s^{{-1}}}}  )]$")
-#     ax1 = axre.pcolormesh(X*1e9,Y*1e9,np.real(potentials[i+2]), norm=colors.CenteredNorm(), cmap="RdBu_r")
-#     axre.set_aspect(1)
-#     plt.colorbar(ax1)
-#     axre.set(xlabel = "$x \, / \, \mathrm{nm}$",
-#            ylabel = "$y \, / \, \mathrm{nm}$")
-    
-#     axim.set_title(f"Im$[\,\Phi_{{{i+1}}} ( \omega = {omega/1e15} \cdot 10^{{15}} \, \mathrm{{rad\cdot s^{{-1}}}}  )]$")
-#     ax2 = axim.pcolormesh(X*1e9,Y*1e9,np.imag(potentials[i+2]), norm=colors.CenteredNorm(), cmap="PiYG_r")
-#     axim.set_aspect(1)
-#     plt.colorbar(ax2)
-#     axim.set(xlabel = "$x \, / \, \mathrm{nm}$",
-#            ylabel = "$y \, / \, \mathrm{nm}$")
-    
-
-#     fig.savefig(f"potentials/Phi_{i}.png", dpi=150)
-
-# #%% nalezeni gfactors
-
-# epsilon = permitivity_drude(omega, omega_p, gamma_p)
-# eigenlambdas = eigenpseudolambdas / 2 / np.pi
-# gfactors = np.imag(-2 / (epsilon * (1 + eigenlambdas) + (1 - eigenlambdas) ) )
 
 #%% O M E G A S   A   G F A C T O R S
 # omegas chosen to fit the maxima of absorption peaks
@@ -196,7 +121,7 @@ gfactors = gfactorss[:,preskoc:preskoc+nmax].T
 
 potentials = [] 
 for n in range(numofstates)[preskoc:preskoc+nmax]:
-    potential=[]
+    potential = []
     for omega in omegas:
         potentialek = (
                     2 * pfacearea * eigencharges[:,n] * np.exp(-1j * omega / v * sz) @

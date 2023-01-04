@@ -5,12 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="152ae8e2-3a08-42e5-8d55-9d524cebd5c4" name="Changes" comment="uklizeni">
+      <change afterPath="$PROJECT_DIR$/Python/functions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python/numericsmapprocessor2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python/numericsmapprocessor_normator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/numericsmapprocessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/numericsmapprocessor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -42,14 +55,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Fyzing/Projects/vortex_eels/vortex_eels&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Fyzing/Projects/vortex_eels/vortex_eels/Python"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Fyzing\Projects\vortex_eels\vortex_eels\Python" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Fyzing\Projects\vortex_eels\vortex_eels\Python" />
       <recent name="C:\Fyzing\Projects\vortex_eels\vortex_eels\Python\Data" />

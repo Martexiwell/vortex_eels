@@ -117,7 +117,7 @@ for i in range(numofstates-2):
     plt.colorbar(ax1)
     ax.set(xlabel = "$x \, / \, \mathrm{nm}$",
            ylabel = "$y \, / \, \mathrm{nm}$")
-    fig.savefig(f"potentials/Phi_{i}_re.png", dpi=150)
+    fig.savefig(f"Potentials/Phi_{i}_re.png", dpi=150)
     
 #%% vykresleni vlastnich modu imag
 
@@ -129,7 +129,7 @@ for i in range(numofstates-2):
     plt.colorbar(ax1)
     ax.set(xlabel = "$x \, / \, \mathrm{nm}$",
            ylabel = "$y \, / \, \mathrm{nm}$")
-    fig.savefig(f"potentials/Phi_{i}_im.png", dpi=150)
+    fig.savefig(f"Potentials/Phi_{i}_im.png", dpi=150)
     
 #%% vykresleni vlastnich modu abs
 
@@ -159,7 +159,7 @@ for i in range(numofstates-2):
            ylabel = "$y \, / \, \mathrm{nm}$")
     
 
-    fig.savefig(f"potentials/Phi_{i}.png", dpi=150)
+    fig.savefig(f"Figures/potentials/Phi_{i}.png", dpi=150)
 
 #%% nalezeni gfactors
 
@@ -190,7 +190,7 @@ ax.set_xlim(omegas[0], omegas[-1])
 ax.set(xlabel = "$\omega \, / \, \mathrm{rad\cdot s^{-1}}$",
        ylabel = "Im$[-g_n(\omega)]$")
 
-fig.savefig("gfactors.png", dpi=150)
+fig.savefig("Figures/gfactors.png", dpi=150)
 
 #%% P O T E N T I A L S
 
@@ -208,7 +208,7 @@ for n in range(numofstates)[preskoc:preskoc+nmax]:
 potentials = np.array(potentials)
 
 #%%
-np.save("potentials.npy", potentials)
+np.save("Data/potentials.npy", potentials)
 #%% W A V E F U N C T I O N S
 
 xc = 0e-9
@@ -243,7 +243,7 @@ plt.colorbar(ax2, ax=axphase, fraction=0.046, pad=0.035)
 axphase.set(xlabel = "$x \, / \, \mathrm{nm}$",)
 
 
-fig.savefig("Psi.png", dpi=150)
+fig.savefig("Figures/Psi.png", dpi=150)
 
 #%% S P E C T R U M
 integrandek = psii * psif  * potentials
@@ -260,17 +260,6 @@ metadata = {'li': li,
             }
 np.savetxt(f"Data/spectrum_li{li}_lf{lf}_xc{xc}_yc{yc}.csv", spectrum, header=str(metadata)+"\nomega\tgamma")
 
-#%%
-
-def read_matlab_data( filename):
-    csvpath =  filename
-    data = np.loadtxt(csvpath, dtype = float)
-    f = open(csvpath, "r")
-    txt = f.readline()[2:].replace("'","\"")#.replace("datetime.datetime","")
-    metadata = eval(txt)
-    f.close()
-
-    return data, metadata
 
 #%%
 fig,ax = plt.subplots()
@@ -414,7 +403,7 @@ for i in range(7):
     ax1.set_title(f"$x_c = y_c = {round(float(xc)*1e9)}$ nm")
     fig.set_figwidth(17/inchtocm)
     fig.show()
-    fig.savefig(f"spectra/EELSF_xc{xc}_w.png", 
+    fig.savefig(f"Spectra/EELSF_xc{xc}_w.png",
                 dpi = 150, 
                 bbox_inches='tight', 
                 #transparent=True

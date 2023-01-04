@@ -5,6 +5,8 @@ numericsprocessor
 @author: MrMai
 """
 
+#%% import
+
 import numpy as np
 from scipy.special import kn
 
@@ -35,10 +37,10 @@ plt.rcParams.update({
 
 #%% read data
 
-eigencharges = read_matlab_data("eigencharges")
-eigenpseudolambdas = np.diag(np.loadtxt("eigenpseudolambdas.csv",delimiter=","))
-pfacepos = read_matlab_data("pfacepos")
-pfacearea = read_matlab_data("pfacearea")
+eigencharges = read_matlab_data("Data/eigencharges")
+eigenpseudolambdas = np.diag(np.loadtxt("Data/eigenpseudolambdas.csv", delimiter=","))
+pfacepos = read_matlab_data("Data/pfacepos")
+pfacearea = read_matlab_data("Data/pfacearea")
 
 numofpoints, numofstates  = np.shape(eigencharges) 
 
@@ -220,8 +222,8 @@ lf=+1
 li=+1
 
 print("Preparing the initial psis ... ", end="")
-psii = np.array([[wave_functions.psiperp(li, X-xc,Y-yc,qa)]])
-psif = np.array([[wave_functions.psiperp(li, X-xc,Y-yc,qc)]])
+psii = np.array([[wave_functions.psiperp(li, X - xc, Y - yc, qa)]])
+psif = np.array([[wave_functions.psiperp(li, X - xc, Y - yc, qc)]])
 print("DONE")
 
 #%%
@@ -257,7 +259,7 @@ metadata = {'li': li,
             'xc': xc,
             'yc': yc
             }
-np.savetxt(f"spectrum_li{li}_lf{lf}_xc{xc}_yc{yc}.csv", spectrum, header=str(metadata)+"\nomega\tgamma")
+np.savetxt(f"Data/spectrum_li{li}_lf{lf}_xc{xc}_yc{yc}.csv", spectrum, header=str(metadata)+"\nomega\tgamma")
 
 #%%
 
@@ -280,12 +282,12 @@ markers = np.array(["$"]*7,dtype=object)+np.array(range(7)).astype(str).astype(o
 
 for i in range(7):
     xc = xcs[i]
-    fname1 = f"fullspectrum_li1_lf1_xc{xc}_yc{xc}.csv"
+    fname1 = f"Data/fullspectrum_li1_lf1_xc{xc}_yc{xc}.csv"
     data1, metadata1 = read_matlab_data(fname1)
     omegas1 = data1[:,0]
     gammas1 = data1[:,1]
     
-    fname2 = f"fullspectrum_li-1_lf-1_xc{xc}_yc{xc}.csv"
+    fname2 = f"Data/fullspectrum_li-1_lf-1_xc{xc}_yc{xc}.csv"
     data2, metadata2 = read_matlab_data(fname2)
     omegas2 = data2[:,0]
     gammas2 = data2[:,1]
@@ -324,12 +326,12 @@ markers = np.array(["$"]*7,dtype=object)+np.array(range(7)).astype(str).astype(o
 
 for i in range(7):
     xc = xcs[i]
-    fname1 = f"fullspectrum_li1_lf1_xc{xc}_yc{xc}.csv"
+    fname1 = f"Data/fullspectrum_li1_lf1_xc{xc}_yc{xc}.csv"
     data1, metadata1 = read_matlab_data(fname1)
     omegas1 = data1[:,0]
     gammas1 = data1[:,1]
     
-    fname2 = f"fullspectrum_li-1_lf-1_xc{xc}_yc{xc}.csv"
+    fname2 = f"Data/fullspectrum_li-1_lf-1_xc{xc}_yc{xc}.csv"
     data2, metadata2 = read_matlab_data(fname2)
     omegas2 = data2[:,0]
     gammas2 = data2[:,1]
@@ -361,12 +363,12 @@ xcs = ["-2e-08", "-1e-08", "0.0", "1e-08", "2e-08", "2.5e-08", "3e-08"]
 markers = np.array(["$"]*7,dtype=object)+np.array(range(7)).astype(str).astype(object)+np.array(["$"]*7,dtype=object)
 for i in range(7):
     xc = xcs[i]
-    fname1 = f"fullspectrum_li1_lf1_xc{xc}_yc{xc}.csv"
+    fname1 = f"Data/fullspectrum_li1_lf1_xc{xc}_yc{xc}.csv"
     data1, metadata1 = read_matlab_data(fname1)
     omegas1 = data1[:,0]
     gammas1 = data1[:,1]
     
-    fname2 = f"fullspectrum_li-1_lf-1_xc{xc}_yc{xc}.csv"
+    fname2 = f"Data/fullspectrum_li-1_lf-1_xc{xc}_yc{xc}.csv"
     data2, metadata2 = read_matlab_data(fname2)
     omegas2 = data2[:,0]
     gammas2 = data2[:,1]
